@@ -1,0 +1,31 @@
+# Dependency & build directories
+node_modules/
+vendor/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.git/
+.lancedb/
+dist/
+build/
+.egg-info/
+*.egg-info/
+
+# Large binaries and media
+*.zip
+*.tar.gz
+*.iso
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.mp4
+*.exe
+*.so
+*.dll
+*.dylib
+
+# State & database files
+.rag_state.json
+.rag_index/

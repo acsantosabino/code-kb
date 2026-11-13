@@ -1,0 +1,10 @@
+#!/bin/bash
+# RAG Legado incremental update git hook
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+if [ -d "$REPO_ROOT" ]; then
+  PYTHON_BIN="$REPO_ROOT/.venv/bin/python"
+  if [ ! -f "$PYTHON_BIN" ]; then
+    PYTHON_BIN="python3"
+  fi
+  nohup "$PYTHON_BIN" -m mcp_server.incremental_update > /dev/null 2>&1 &
+fi

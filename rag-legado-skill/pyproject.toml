@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-legado-skill"
+version = "0.1.0"
+description = "Local-first portable RAG knowledge base and agent skills for legacy codebases"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Code-KB Team" }
+]
+dependencies = [
+    "tree-sitter>=0.21.0",
+    "tree-sitter-languages>=1.10.0",
+    "markdown-it-py>=3.0.0",
+    "sentence-transformers>=2.2.2",
+    "lancedb>=0.5.0",
+    "rank-bm25>=0.2.2",
+    "mcp>=1.0.0",
+    "pyarrow>=14.0.0",
+    "numpy>=1.24.0",
+    "pydantic>=2.0.0"
+]
+
+[project.scripts]
+rag-legado = "mcp_server.server:main"

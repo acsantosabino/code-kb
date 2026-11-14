@@ -51,3 +51,9 @@ htmlcov/
 # OS specific files
 .DS_Store
 Thumbs.db
+
+# Artefatos locais de agentes/IDE
+.agent/
+.claude/
+.opencode/
+.mcp.json
